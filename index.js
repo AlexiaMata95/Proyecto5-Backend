@@ -6,11 +6,11 @@ const cors = require('cors')
 require('./db/mongo')
 const apiRouter = require('./apis')
 
-
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 
-app.use('/api/v1', apiRouter)
+
+app.use('/', apiRouter)
 app.get('/',( req, res )=>{
     res.send('Servidor vivo')
 })
