@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 
-app.use('/', apiRouter)
+app.use('/api/v1', apiRouter)
 app.get('/',( req, res )=>{
     res.send('Servidor vivo')
 })
