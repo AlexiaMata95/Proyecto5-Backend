@@ -7,9 +7,8 @@ const authRouter = require('./auth')
 const authMiddleware = require('../middlewares/authorization')
 const registerRouter = require('./register')
 
-router.use('/products',productsRouter)
-
 router.use('/auth', authRouter)
+router.use('/products',productsRouter)
 router.use('/register', registerRouter)
 
 router.use(authMiddleware)
